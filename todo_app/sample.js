@@ -17,9 +17,8 @@ function addItem(e) {
 
 		editItem.target.parentNode.childNodes[0].data
 			= document.getElementById("item").value;
-		let newDateValue = document.getElementById("date").value;
-		alert(newDateValue)
-			document.getElementById("date").value = newDateValue;
+		editItem.target.parentNode.childNodes[1].data
+			=document.getElementById("date").value
 		submit.value = "Submit";
 		document.getElementById("item").value = "";
 		document.getElementById("date").value ="";
