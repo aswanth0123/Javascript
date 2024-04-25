@@ -65,3 +65,67 @@
     
 // }
 // data()
+
+
+// single api 
+// const fetchdata= async ()=>{
+//         try{
+//                 const response = await fetch('https://jsonplaceholder.typicode.com/posts/1')
+//                 const data = await response.json()
+//                 console.log(data)
+//         }catch(error){
+//                 console.log("error")
+//         }
+
+// }
+// fetchdata()
+
+
+// const main = async (url)=>{
+//         try{
+//                 const response = await fetch('url')
+//                 const data = await response.json()
+//                 return data
+//         }catch(error){
+//                 return error
+//         }
+
+// }
+// const fetchdata = async () =>{
+//         try{
+//                 const response = await main("https://jsonplaceholder.typicode.com/posts/1")
+//                 console.log(response)
+//         }catch(error){
+//                 console.log("error")
+//         }
+// } 
+// fetchdata()
+
+
+
+const main = async (url)=>{
+        try{
+                const response = await fetch('url')
+                const data = await response.json()
+                console.log(data);
+                return [data,null]
+        }catch(error){
+                return [null,error]
+        }
+
+}
+const fetchdata = async () =>{
+        const [response,error] = await main("https://jsonplaceholder.typicode.com/posts")
+        if (response){
+                console.log(response)
+
+        }
+        else{
+                console.log(error)
+        }
+
+
+       
+        
+} 
+fetchdata()
